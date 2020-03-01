@@ -28,7 +28,7 @@ db = TSPDatabase()
 initial_attraction = 33
 
 #select an initial date on which to perform the search
-starting_data = "2018-11-1"
+starting_date = "2018-11-1"
 
 #create two lists to hold the visited and un-visited attractions
 not_visited_list = db.get_attractions_list()
