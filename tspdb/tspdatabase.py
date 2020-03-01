@@ -83,7 +83,11 @@ class TSPDatabase:
     def get_wait_time(self, date:str, id:int):
         day_wait_time = TSPDatabase.waitTimeDict[date]
         ride_wait_time = day_wait_time[str(id)]
-        return ride_wait_time
+
+        if ride_wait_time == None:
+            return 0
+        else:
+            return ride_wait_time
 
     # load wait times from a JSON file specified as a string with an absolute path
     def load_open_hours_from_file(self, filename: str):
